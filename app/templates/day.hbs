@@ -1,0 +1,21 @@
+<p>{{#link-to 'index' classNames="today"}}Today{{/link-to}}</p>
+
+<p>
+{{#link-to 'day' yesterday}}&laquo;{{/link-to}}
+Date: {{formatted}}
+{{#if tomorrow}}
+{{#link-to 'day' tomorrow}}&raquo;{{/link-to}}
+{{/if}}
+</p>
+
+{{bottle-image drunk=drunk}}
+
+{{view Ember.Select
+       content=cups
+       optionValuePath="content.ml"
+       optionLabelPath="content.name"
+       value=selectedCup
+}}
+
+<button {{action 'drinkCup'}}>Drink!</button>
+<button {{action 'emptyBottle'}}>X</button>
