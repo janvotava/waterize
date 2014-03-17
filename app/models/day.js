@@ -12,7 +12,7 @@ var Day = Ember.Object.extend({
   // We'll use this as a key for the storage
   storageKey: function() {
     return "%@|%@".fmt(Day.namespace, this.get("formatted"));
-  }.property("formatited"),
+  }.property("formatted"),
 
   // ml drunk
   drunk: function() {
